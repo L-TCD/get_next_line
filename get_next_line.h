@@ -21,5 +21,11 @@
 # endif
 
 char	*get_next_line(int fd);
+char	*read_save(int fd, char *stock);
+char	*get_final_line(char *stock);
+char	*save(char *stock);
+size_t	ft_strlen(const char *str);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strjoin(char *s1, char *s2);
 
 #endif
