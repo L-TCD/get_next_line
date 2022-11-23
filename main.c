@@ -1,13 +1,21 @@
-#include "get_next_line.h"
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcoissar <lcoissar@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/23 08:59:42 by lcoissar          #+#    #+#             */
+/*   Updated: 2022/11/23 08:59:42 by lcoissar         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
 
-//cc -D BUFFER_SIZE=1000 main.c get_next_line.c libftprintf.a && ./a.out
+#include "get_next_line.h"
+
+//gcc -Wall -Werror -Wextra -D BUFFER_SIZE=1000 *.c && ./a.out
 
 int	main(void)
 {
-	// ft_printf("%s\n", get_next_line(1));
-	// ft_printf("%s\n", get_next_line(0));
-	// ft_printf("%s\n", get_next_line(-1));
 	int		fd;
 	char	*line;
 
@@ -19,7 +27,7 @@ int	main(void)
 		line = get_next_line(fd);
 		if (line == NULL)
 			break ;
-		ft_printf("%s\n", line);
+		printf("%s", line);
 		free(line);
 	}
 	return (0);
